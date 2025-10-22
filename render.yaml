@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mysql-database
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: MYSQL_ROOT_PASSWORD
+        value: vscproject
+      - key: MYSQL_DATABASE
+        value: productdb
+      - key: MYSQL_USER
+        value: root2
+      - key: MYSQL_PASSWORD
+        value: vscproject
+    ports:
+      - 3306
