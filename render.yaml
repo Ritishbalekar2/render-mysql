@@ -15,5 +15,3 @@ services:
         value: root2
       - key: MYSQL_PASSWORD
         value: vscproject
-    ports:
-      - 3306
